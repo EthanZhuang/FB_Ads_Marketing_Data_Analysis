@@ -5,9 +5,10 @@ import datetime
 import csv
 
 # Set the info to get connected to the API. Do NOT share this info
-my_app_id = '<Your app id>'
-my_app_secret = '<Your app secret>'
-my_access_token = '<user token>'
+access_token = 'EAAJqMzKi2IsBAJp9LxmjKZBfEG5P5WXqzUO8f4eXoUYRr9beYIxSRXKFuXMUTVZCMaJnwewurtWpq93qiyB7X8wfDotZCQZC5M1B9YZAgIuiTEY5cHgOZAhmxGpOin6DM0HZAPcAmzs8YDBnAs4YzS9D1D5jZCLWLUkdhGVhbmddkAZDZD'
+ad_account_id = 'act_132799196821088'
+app_secret = 'b3700e4944af0e889dc572179bd6800d'
+app_id = '679718078830731'
 
 FacebookAdsApi.init(access_token = access_token)
 
