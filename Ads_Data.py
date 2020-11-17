@@ -5,10 +5,10 @@ import datetime
 import csv
 
 # Initialize the access_token
-access_token = '<Your access_token>'
-ad_account_id = '<Your Ads_Account_id>'
-app_secret = '<Your app_secrets>'
-app_id = '<Your app_id>'
+access_token = 'EAAJqMzKi2IsBAJp9LxmjKZBfEG5P5WXqzUO8f4eXoUYRr9beYIxSRXKFuXMUTVZCMaJnwewurtWpq93qiyB7X8wfDotZCQZC5M1B9YZAgIuiTEY5cHgOZAhmxGpOin6DM0HZAPcAmzs8YDBnAs4YzS9D1D5jZCLWLUkdhGVhbmddkAZDZD'
+ad_account_id = 'act_132799196821088'
+app_secret = 'b3700e4944af0e889dc572179bd6800d'
+app_id = '679718078830731'
 
 FacebookAdsApi.init(access_token = access_token)
 
@@ -31,6 +31,11 @@ params = {
 #     'date_preset': 'last_7d',
     'level': {'campaign'},
     'time_increment': '1',
+    # Default 歸因(目前確認和廣告面板上面的相同 7天點擊 + 7天瀏覽)
+    # 'use_account_attribution_setting': 'True',
+
+    # 自己設定的歸因(和廣告預設值有落差)
+    # 'action_attribution_windows': {'7d_click', '7d_view'},
 }
 
 acc_insights = AdAccount(ad_account_id).get_insights(
