@@ -31,11 +31,6 @@ params = {
 #     'date_preset': 'last_7d',
     'level': {'campaign'},
     'time_increment': '1',
-    # Default 歸因(目前確認和廣告面板上面的相同 7天點擊 + 7天瀏覽)
-    # 'use_account_attribution_setting': 'True',
-
-    # 自己設定的歸因(和廣告預設值有落差)
-    # 'action_attribution_windows': {'7d_click', '7d_view'},
 }
 
 acc_insights = AdAccount(ad_account_id).get_insights(
