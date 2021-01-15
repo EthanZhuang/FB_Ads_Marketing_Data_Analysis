@@ -1,1 +1,0 @@
-Campaign_name	Objective	Amount_spent(NTD)	Amount_install	Amount_purchase	Purchase_Conversion_Value	Amount_subscribe	Subscribe_Conversion_Value	Reporting_date
