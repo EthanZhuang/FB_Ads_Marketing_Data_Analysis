@@ -24,12 +24,22 @@ class FbAds_Data(object):
     DBdata_cr = conn_DBdata.cursor()
     TableName = 'FB_AdsData'
 
-    def __init__(self,)
+    # def __init__(self,)
 # %%
 if __name__ == '__main__':
-
-
 # %% [markdown]
-# ## Heading 1
+## Heading 1
 
 # %%
+
+from dateutil.relativedelta import relativedelta
+
+
+
+# %%
+from typing import Union
+def ugly_functions(value: int, \
+    operation: Union[str, int, float, bool]): -> int:
+    operation.
+    print(a)
+    return a 
