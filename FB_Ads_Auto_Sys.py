@@ -1,3 +1,4 @@
+# %%
 from facebook_business.adobjects.adaccount import AdAccount
 from facebook_business.adobjects.adsinsights import AdsInsights
 from facebook_business.api import FacebookAdsApi
@@ -14,6 +15,7 @@ import smtplib
 from email.mime.text import MIMEText
 import socket
 
+# %%
 # 連線SQL
 DBdata = {'ip':'192.168.99.142', 'db':'CMAPP'}
 user142 = 'cmapp'
@@ -22,7 +24,7 @@ conn_DBdata = pyodbc.connect('DRIVER={SQL Server};SERVER=' + DBdata['ip'] + \
               ';DATABASE=' + DBdata['db'] + ';UID=' + user142 + ';PWD=' + pwd142)
 DBdata_cr = conn_DBdata.cursor()
 TableName = 'FB_AdsData'
-
+# %% 
 # 紀錄程式跑多久時間
 run_time = time.time()
 
@@ -470,4 +472,5 @@ send_email(Msg)
 # flag確立program完整結束
 print('--- %s seconds ---' % (time.time() - run_time))
 
+# %%
 # %%
