@@ -80,9 +80,9 @@ def RD_date_back(cleaned_RD):
     return reporting_date
 
 
-# 增加流水號 & 廣告類別
+# 增加流水號 & 廣告類別 & 廣告營運
 def Expand_df(df, cleaned_SN): 
-    # 第幾排插入流水號 
+    # 第幾個 col 插入流水號(SN)、廣告分類(CA)、 
     idx_SN = 0
     idx_CA = 15
     Serial_Number = []
@@ -112,7 +112,7 @@ def Df_to_Csv(df):
     return None
 
 # 刪除資料
-def DelSQL(TableName, start_time, now_time):
+def DelSQL(TableName: str, start_time, now_time):
     str_query = """
         DELETE
         FROM [CMAPP].[dbo].[{}]
@@ -129,7 +129,7 @@ def InsertSQL(df, TableName):
         [Amount_Purchase],[Purchase_Conversion_Value],[Amount_Subscribe],[Subscribe_Conversion_Value],[CPM],[CTR],[Impressions],[Reporting_Date]\
         ,[Category])VALUES({})
         """
-    # 將csv DataFrame每筆資料變成list形式
+    # 將csv DataFrame每筆資料變成 list 型態
     insert_data = df.values.tolist()
     for i in range(len(insert_data)):
 #         print(str_query.format(TableName, str(insert_data[i]).strip('[]').replace('None', 'null')))      
@@ -142,7 +142,7 @@ def send_email(Text):
 
     MailSender = 'ai@cmoney.tw'
     MailSenderPwd = '1qaz@wsx'
-    MailReceivers = ['love824671@gmail.com','ethanzhuang824671@gmail.com']
+    MailReceivers = ['love824671@gmail.com','sam_liao@comney.com.tw', 'cathy_want@comney.com.tw']
     MailText = Text
     MailContents = MIMEText(MailText,'Plain','utf-8')
 
