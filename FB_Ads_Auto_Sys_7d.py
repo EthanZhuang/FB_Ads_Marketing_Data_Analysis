@@ -24,6 +24,8 @@ conn_DBdata = pyodbc.connect('DRIVER={SQL Server};SERVER=' + DBdata['ip'] + \
               ';DATABASE=' + DBdata['db'] + ';UID=' + user142 + ';PWD=' + pwd142)
 DBdata_cr = conn_DBdata.cursor()
 TableName = 'FB_AdsData'
+# TableName = 'FB_AdsTest'
+
 # %% 
 # 紀錄程式跑多久時間
 run_time = time.time()

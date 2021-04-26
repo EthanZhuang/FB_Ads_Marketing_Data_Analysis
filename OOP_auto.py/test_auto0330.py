@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 class TestBaiDu(unittest.TestCase):
     URL = "http://www.baidu.com"
     base_path = os.path.dirname(os.path.abspath(__file__)) + '\..' 
-    driver_path = os.path.abspath(base_path+'D:\VScode\chromedriver.exe')
+    driver_path = os.path.abspath('D:\VScode\chromedriver.exe')
 
     locator_kw = (By.ID, 'kw')
     locator_su = (By.ID, 'su')
